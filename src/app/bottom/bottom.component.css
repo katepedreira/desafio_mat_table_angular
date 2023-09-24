@@ -1,8 +1,10 @@
 .footer {
+  display: flex;
   position: relative;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
   padding: 1rem;
   background-color: #e50914;
   text-align: center;
@@ -18,4 +20,8 @@ color: #fff;
 .footer a:hover {
   text-decoration: underline;
   color: #000;
+}
+
+.text {
+  padding-top: 1%;
 }
