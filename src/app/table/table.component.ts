@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 export interface MovieData {
   id: string;
@@ -235,9 +236,10 @@ const movies: MovieData[] = [
   imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule],
 })
 
-export class TableComponent {
+export class TableComponent implements OnInit {
   displayedColumns: string[] = ['id', 'poster', 'name', 'duration', 'director'];
   dataSource: MatTableDataSource<MovieData>;
+  pageSizeOptions: number[] = [5, 10, 20];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -246,9 +248,16 @@ export class TableComponent {
     this.dataSource = new MatTableDataSource(movies);
   }
 
+  ngOnInit() {
+    this.updatePaginatorLength();
+  }
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    const totalMovies = this.dataSource.data.length;
+    this.pageSizeOptions = [5, 10, 20, totalMovies];
   }
 
   applyFilter(event: Event) {
@@ -259,6 +268,9 @@ export class TableComponent {
       this.dataSource.paginator.firstPage();
     }
   }
-}
 
+  private updatePaginatorLength() {
+    this.paginator.length = movies.length;
+  }
+}
 
