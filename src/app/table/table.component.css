@@ -1,3 +1,19 @@
-table {
-  width: 100%;
+/* Defina uma largura máxima para a tabela e centralize-a na página */
+.custom-table-container {
+  max-width: 90%; /* Defina a largura máxima que você deseja */
+  margin: 0 auto; /* Centralize a tabela horizontalmente */
+}
+
+/* Estilo opcional para a tabela (se necessário) */
+.custom-table {
+  width: 100%; /* Defina a largura da tabela como 100% para ocupar a largura máxima do contêiner */
+  border: 2px solid red;
+  border-radius: 0px;
+}
+
+.search {
+
+  margin-left: 5%;
+
+
 }

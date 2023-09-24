@@ -41,7 +41,8 @@ const DIRECTORS: string[] = [
   'Dan Trachtenberg',
   'Juliano Dornelles, Kleber Mendonça Filho',
   'Alex Garland',
-  'David Fincher'
+  'David Fincher',
+  'Christopher Nolan',
 ];
 
 const NAMES: string[] = [
@@ -73,8 +74,16 @@ const NAMES: string[] = [
   '10 Cloverfield Lane',
   'Bacurau',
   'Ex Machina',
-  'The Social Network'
+  'The Social Network',
+  'Interestelar'
 ];
+
+const POSTER_URLS: string[] = [
+  'https://media.fstatic.com/Yh3UyUZUFYKnfKr86mntj7XGpOQ=/210x312/smart/filters:format(webp)/media/movies/covers/2015/08/a-bruxa_t113126.jpeg',
+  'https://media.fstatic.com/brlBiiSMmJ4COQlFGkSTXfnjoms=/210x312/smart/filters:format(webp)/media/movies/covers/2014/08/coherence_t101327.jpg',
+  // Adicione URLs para os outros filmes aqui
+];
+
 
 const DURATIONS: string[] = [
   '120',
@@ -105,7 +114,8 @@ const DURATIONS: string[] = [
   '103',
   '131',
   '108',
-  '120'
+  '120',
+  '168'
 
 ];
 
@@ -131,7 +141,7 @@ shuffleArray(shuffledMoviesAndDirectors);
 })
 
 export class TableComponent {
-  displayedColumns: string[] = ['id', 'name', 'duration', 'director'];
+  displayedColumns: string[] = ['id', 'poster', 'name', 'duration', 'director'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
