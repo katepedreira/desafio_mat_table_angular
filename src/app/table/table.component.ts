@@ -55,7 +55,7 @@ const movies: MovieData[] = [
     name: 'Get Out',
     duration: '104',
     director: 'Jordan Peele',
-    posterUrl: 'https://media.fstatic.com/Gye1zHgyPUpxTjo12y1vy6OVTjU=/210x312/smart/filters:format(webp)/media/movies/covers/2017/04/577190.jpg-r_1920_1080-f_jpg-q_x-xxyxx.jpg',
+    posterUrl: 'https://media.fstatic.com/viu_FOH-zv8x2YtAiAoDqJNVn-U=/210x312/smart/filters:format(webp)/media/movies/covers/2017/02/get_out_ver4.jpg',
   },
   {
     id: '7',
