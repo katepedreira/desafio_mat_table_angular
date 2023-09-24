@@ -1,6 +1,6 @@
 /* Defina uma largura máxima para a tabela e centralize-a na página */
 .custom-table-container {
-  max-width: 90%; /* Defina a largura máxima que você deseja */
+  max-width: 95%; /* Defina a largura máxima que você deseja */
   margin: 0 auto; /* Centralize a tabela horizontalmente */
 }
 
@@ -13,7 +13,7 @@
 
 .search {
 
-  margin-left: 5%;
+  margin-left: 2.5%;
 
 
 }
